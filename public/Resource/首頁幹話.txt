@@ -1,0 +1,15 @@
+大家掰掰掰掰掰掰掰掰掰掰
+print("HelloWorld")
+print("你好世界")
+sudo rm -rf /
+$ ponysay 'helloworld'
+Segmentation fault (core dumped)
+0xfee1dead
+團結吧 雲科的資訊人
+import yuntech-opensource as yunosc
+:wq
+雲科 Lightning Talk 就在 5/21
+#include <yunosc.h>
+\\\\(Owooooooooo)////
+\\\\(QAQ)////
+5Zyo6Zuy5p6X5pCe6LOH6KiK56S+5ZyY5piv5LiN5piv5pCe6Yyv5LqG5LuA6bq8
