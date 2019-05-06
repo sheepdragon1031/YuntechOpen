@@ -5,10 +5,10 @@ import './App.css';
 import Index from './component/index/index';
 import AppBar from './component/appbar/index';
 import Photo from './component/photo/index';
-import About from './component/about/index';
-import Tool from './component/about/tool';
-import Frame from './component/about/frame';
-import Project from './component/about/project';
+import Calendar from './component/calendar/index';
+import report from './component/report/index';
+import Charter from './component/charter/index';
+import NursingHome from './component/nursingHome/index';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const styles = ({
@@ -31,15 +31,12 @@ class App extends Component {
             <AppBar />
             <Route path="/index" component={Index} />
             <Route path="/photo" component={Photo} />
+            <Route path="/calendar" component={Calendar} />
+            <Route path="/charter" component={Charter} />
+            <Route path="/report" component={report} />
+            <Route path="/nursingHome" component={NursingHome} />
             </ParallaxProvider>
           </Router>  
-          
-
-          
-          {/* <About/>
-          <Tool />
-          <Frame /> 
-          <Project /> */}
                      
              {/* <div className="boxs" style={styles.boxs}></div> */}
           

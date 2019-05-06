@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
-import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Gallery from "react-photo-gallery";
-
+import Gallery from 'react-grid-gallery';
+import PropTypes from 'prop-types';
+import Title from '../title/index'
 const styles = theme => ({
     root: {
       ...theme.mixins.gutters(),
@@ -35,42 +32,63 @@ const style =  ({
       backgroundSize: 'cover',
       height: '100vh',
       paddingTop: '5rem',
+    },
+    blackLine:{
+      marginLeft: '-1rem',
+      padding: '.5rem',
+      background: '#000',
     }
 })
 
+
 class about extends Component {
-    
-    render() {
-      const { classes } = this.props;
-      let imgs = [];
-      for(let i = 1; i < 29 ; i++){
-        imgs[i -1] = {
-          src: `Resource/photo/P${i}.png`,
-          width: Math.floor(Math.random() * 2),
-          height: Math.floor(Math.random() * 2),
-          sizes: ["(min-width: 480px) 5vw,(min-width: 1024px) 20vw"],
+    constructor(props){
+      super(props);
+      this.state = {
+          images: this.props.images,
+          page: '照片牆'
+      };
+      for(let i = 0; i < 27 ; i++){
+        this.props.images[i] = {
+          src: `Resource/photo/P${i + 1}.png`,
+          thumbnail: `Resource/photo/P${i + 1}.png`,
+          thumbnailWidth: 320,
+          thumbnailHeight: 174,
         }
       }
-      const photos = imgs;
-          return (
+    }
+    render() {
+      const { classes } = this.props;
+      let images = [];
+      const photos = images;
+      return (
         <Grid container className={classes.root} style={style.main} spacing={16} 
         direction="row"
-        justify="top"
+        justify="center"
         alignItems="center"  id="photo">
          <Grid container spacing={0} >
+            <Title title={this.state.page}/>
             <Grid item xs={12}>
-              <Typography component="h2" variant="h2" >開放原始碼研究社</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography component="h2" variant="h2" >照片牆</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Gallery photos={photos} />
+              <Gallery images={this.state.images} enableImageSelection={false}/>
             </Grid>
          </Grid>
        </Grid>
       );
     }
   }
-  
+
+  about.propTypes = {
+    images: PropTypes.arrayOf(
+        PropTypes.shape({
+            src: PropTypes.string.isRequired,
+            thumbnail: PropTypes.string.isRequired,
+            thumbnailWidth: PropTypes.number.isRequired,
+            thumbnailHeight: PropTypes.number.isRequired
+        })
+    ).isRequired
+  };
+  about.defaultProps ={
+    images: ([
+    ])
+  }
   export default withStyles(styles)(about);

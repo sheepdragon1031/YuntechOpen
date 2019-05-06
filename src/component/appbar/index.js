@@ -19,54 +19,70 @@ const styles =  ({
     },
     nav:{
         textAlign: 'center',
-        color: grey[50],
+        color: grey[800],
         display: 'block',
-        width: '100%'
+        width: '100%',
+        textDecoration: 'none'
     },
     bigAvatar: {
         margin: 10,
-        width: 60,
-        height: 60,
+        width: 30,
+        height: 30,
+        pagging: 5,
       },
+    AppBar: {
+        backgroundColor: 'rgba(0,0,0,0)',
+       // background: "url('Resource/Top_Background.svg') top center no-repeat ",
+        backgroundSize: '100%',
+        boxShadow: 'none',
+    },
 })
 
 class header extends Component {
     render() {
     let nav = [
         {text: '照片牆', href: '/photo'},
-        {text: '行事曆', href: 'index'},
-        {text: '章程', href: '/index'},
-        {text: '社費報表', href: '/about'}
+        {text: '行事曆', href: '/calendar'},
+        {text: '章程', href: '/charter'},
+        {text: '社費報表', href: '/report'},
+        {text: '養老院', href: '/NursingHome'}
     ]
     let html = nav.map((arr, index) => 
         <Grid item xs={2} key={index} align="center">
-            <Link to={arr.href}><ListItem button>
-                <Typography style={styles.nav} align="center">
-                 {arr.text}
-                </Typography>
-            </ListItem> </Link>
+            <Link to={arr.href} style={{textDecoration: 'none'}}>
+                <ListItem button>
+                    <Typography style={styles.nav} align="center">
+                    {arr.text}
+                    </Typography>
+                </ListItem>
+             </Link>
         </Grid>
     )
     return (   
-            <AppBar >
-                <Toolbar variant="dense">
+            <AppBar style={styles.AppBar}>
+                <Toolbar variant="regular">
                 <Grid container direction="row" justify="center" alignItems="center">
-                    <Grid item xs={2} align="center">
+                    <Grid item xs={1} align="center">
                         <Link to="/index">
-                            <Avatar alt="YuntechMark" src="/Resource/YuntechMark.svg" styles={styles.bigAvatar} />
+                            <Avatar alt="YuntechMark" src="/Resource/YuntechMark.svg" style={styles.bigAvatar} />
                         </Link>
                     </Grid>
                     {html}
                     <Grid item xs={1} align="center">
-                        <Link to="google.com">
-                            <Avatar alt="facebook" src="/Resource/facebook.svg" styles={styles.bigAvatar} />
-                        </Link>
+                        <Grid container>
+                            <Grid item xs={6} align="center">
+                                <Link to="https://facebook.com">
+                                    <Avatar alt="facebook" src="/Resource/facebook.svg" style={styles.bigAvatar} />
+                                </Link>
+                            </Grid>
+                            <Grid item xs={6} align="center">
+                                <Link to="https://google.com">
+                                    <Avatar alt="github" src="/Resource/github.svg" style={styles.bigAvatar} />   
+                                </Link>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={1} align="center">
-                        <Link to="google.com">
-                            <Avatar alt="github" src="/Resource/github.svg" styles={styles.bigAvatar} />   
-                        </Link>
-                    </Grid>
+                    
                 </Grid>
                 </Toolbar>
             </AppBar> 
