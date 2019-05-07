@@ -67,6 +67,7 @@ class tab extends Component {
                         </TabContainer>
                         </Paper>)
                 }
+                return false
             })}
             </div>
         );

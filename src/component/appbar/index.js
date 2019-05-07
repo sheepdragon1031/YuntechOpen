@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import grey from '@material-ui/core/colors/grey';
 import Avatar from '@material-ui/core/Avatar';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const styles =  ({
@@ -59,8 +59,8 @@ class header extends Component {
         </Grid>
     )
     return (   
-            <AppBar style={styles.AppBar}>
-                <Toolbar variant="regular">
+            <AppBar style={styles.AppBar} position="absolute">
+                <Toolbar >
                 <Grid container direction="row" justify="center" alignItems="center">
                     <Grid item xs={1} align="center">
                         <Link to="/index">

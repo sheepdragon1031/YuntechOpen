@@ -9,7 +9,7 @@ import Calendar from './component/calendar/index';
 import report from './component/report/index';
 import Charter from './component/charter/index';
 import NursingHome from './component/nursingHome/index';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const styles = ({
   boxs: {

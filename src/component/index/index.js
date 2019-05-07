@@ -23,7 +23,7 @@ class header extends Component {
                       justify="space-between"
                       className="headerGD">
                       <Grid item xs={12}>
-                         <img style={styles.logo} src="/Resource/YunOSC_Hat.svg"/>
+                         <img style={styles.logo} src="/Resource/YunOSC_Hat.svg" alt="YunOSC_Hat.svg"/>
                       </Grid>
                       <Grid container spacing={0} >
                           <Grid item xs={12}>

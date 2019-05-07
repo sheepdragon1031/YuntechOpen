@@ -59,8 +59,6 @@ class about extends Component {
     }
     render() {
       const { classes } = this.props;
-      let images = [];
-      const photos = images;
       return (
         <Grid container className={classes.root} style={style.main} spacing={16} 
         direction="row"
