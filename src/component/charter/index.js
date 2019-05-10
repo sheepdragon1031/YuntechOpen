@@ -15,8 +15,7 @@ const style =  ({
     main: {
       background: "url('Resource/Top_Background.svg') center center no-repeat ",
       backgroundSize: 'cover',
-      height: '100vh',
-      paddingTop: '5rem',
+      padding: '6rem 1rem',
     },
     blackLine:{
       marginLeft: '-1rem',
@@ -33,20 +32,16 @@ class calendar extends Component {
       super(props);
       this.state = {
           images: this.props.images,
-          title: '章程',
+          title: ['社團章程','總務器材章程'],
+          page : [
+            {
+                title: '111',
+                content: '111111111'},
+          ],
           pages : [
             {
                 title: '111',
                 content: '111111111'},
-            {
-                title: '222',
-                content: '222222222'},
-            {
-                title: '333',
-                content: '333333333'},
-            {
-                title: '444',
-                content: '444444444'}
           ]
       };
       
@@ -59,7 +54,13 @@ class calendar extends Component {
         justify="center"
         alignItems="center"  id="photo">
          <Grid container spacing={0} >
-            <Title title={this.state.title}/>
+            <Title title={this.state.title[0]}/>
+            <Grid item xs={12}>
+                <Tabs tab={this.state.page} />
+            </Grid>
+         </Grid>
+         <Grid container spacing={0} >
+            <Title title={this.state.title[1]}/>
             <Grid item xs={12}>
                 <Tabs tab={this.state.pages} />
             </Grid>

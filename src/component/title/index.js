@@ -22,7 +22,7 @@ class title extends Component {
     }
     render() {
         return (
-            <Grid container spacing={0} >
+            <Grid container spacing={16} >
                 <Grid item xs={12}>
                 <Typography component="h2" variant="h2" >開放原始碼研究社</Typography>
                 </Grid>

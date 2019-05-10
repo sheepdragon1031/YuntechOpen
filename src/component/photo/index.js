@@ -30,8 +30,7 @@ const style =  ({
     main: {
       background: "url('Resource/Top_Background.svg') center center no-repeat ",
       backgroundSize: 'cover',
-      height: '100vh',
-      paddingTop: '5rem',
+      padding: '6rem 1rem',
     },
     blackLine:{
       marginLeft: '-1rem',

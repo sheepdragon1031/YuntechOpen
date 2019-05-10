@@ -10,6 +10,7 @@ import report from './component/report/index';
 import Charter from './component/charter/index';
 import NursingHome from './component/nursingHome/index';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Footer from './component/footer/index';
 
 const styles = ({
   boxs: {
@@ -29,13 +30,18 @@ class App extends Component {
           <Router>
             <ParallaxProvider >
             <AppBar />
-            <Route path="/index" component={Index} />
-            <Route path="/photo" component={Photo} />
-            <Route path="/calendar" component={Calendar} />
-            <Route path="/charter" component={Charter} />
-            <Route path="/report" component={report} />
-            <Route path="/nursingHome" component={NursingHome} />
+            <Route path="" component={Index} >
+              <Route path="/index" component={Index} />
+              <Route path="/photo" component={Photo} />
+              <Route path="/calendar" component={Calendar} />
+              <Route path="/charter" component={Charter} />
+              <Route path="/report" component={report} />
+              <Route path="/nursingHome" component={NursingHome} />
+            
+            </Route>
+            
             </ParallaxProvider>
+            <Footer />
           </Router>  
                      
              {/* <div className="boxs" style={styles.boxs}></div> */}
