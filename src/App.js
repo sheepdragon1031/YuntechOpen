@@ -28,7 +28,6 @@ class App extends Component {
     return (
       <div style={styles.root}>
           <Router>
-            
             <AppBar />
             <ParallaxProvider >
             <Route exact path="/" component={Index} />
