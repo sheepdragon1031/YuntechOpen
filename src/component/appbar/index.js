@@ -71,14 +71,14 @@ class header extends Component {
                     <Grid item xs={1} align="center">
                         <Grid container>
                             <Grid item xs={6} align="center">
-                                <Link to="https://facebook.com">
+                                <a href="https://www.facebook.com/">
                                     <Avatar alt="facebook" src="/Resource/facebook.svg" style={styles.bigAvatar} />
-                                </Link>
+                                </a>
                             </Grid>
                             <Grid item xs={6} align="center">
-                                <Link to="https://google.com">
+                                <a href="https://www.google.com/">
                                     <Avatar alt="github" src="/Resource/github.svg" style={styles.bigAvatar} />   
-                                </Link>
+                                </a>
                             </Grid>
                         </Grid>
                     </Grid>
