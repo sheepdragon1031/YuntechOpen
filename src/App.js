@@ -37,7 +37,6 @@ class App extends Component {
               <Route path="/charter" component={Charter} />
               <Route path="/report" component={report} />
               <Route path="/nursingHome" component={NursingHome} />
-            
             </Route>
             
             </ParallaxProvider>

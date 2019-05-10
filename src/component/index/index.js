@@ -19,7 +19,11 @@ const styles = ({
     height: 0,
     marginTop: '1rem',
     paddingTop: '56.25%', // 16:9
-    backgroundSize: 'contain'
+    backgroundSize: 'contain',
+  },
+  card:{
+    background: 'rgba(0,0,0,0)',
+    boxShadow: 'none',
   },
 })
 
@@ -83,54 +87,52 @@ class header extends Component {
                       <Typography component="h4" variant="h4" align="center" >我們在幹嘛</Typography>
                     </Grid>
                     <Grid item xs={3}>
-                          <Card>
+                          <Card style={styles.card}>
                           <CardMedia
                           style={styles.media}
                           image={`/Resource/038-laptop.svg`}
                           title={`038-laptop.svg`} />
                           <CardContent>
                             <Typography component="h5" variant="h5" >開源設課</Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
+                            <Typography variant="body1" >開源社提供主題是的社團活動</Typography>
+                            <Typography variant="body1" >幫助增廣見聞</Typography>
                           </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs={3}>
-                          <Card>
+                          <Card style={styles.card}>
                           <CardMedia
                           style={styles.media}
                           image={`/Resource/026-trophy.svg`}
                           title={`038-laptop.svg`} />
                           <CardContent>
                             <Typography component="h5" variant="h5" >參與比賽</Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
+                            <Typography  variant="body1" >一起手牽手出去比賽</Typography>
                           </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs={3}>
-                          <Card>
+                          <Card style={styles.card}>
                           <CardMedia
                           style={styles.media}
                           image={`/Resource/049-studying.svg`}
                           title={`038-laptop.svg`} />
                           <CardContent>
                             <Typography component="h5" variant="h5" >讀書會</Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
+                            <Typography  variant="body1" >一起寫程式一起成長吧</Typography>
                           </CardContent>
                         </Card>
                     </Grid>
                     <Grid item xs={3}>
-                          <Card>
+                          <Card style={styles.card}>
                           <CardMedia
                           style={styles.media}
                           image={`/Resource/029-speech.svg`}
                           title={`038-laptop.svg`} />
                           <CardContent>
                             <Typography component="h5" variant="h5" >Lighting Talk</Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
-                            <Typography component="body1" variant="body1"  ></Typography>
+                            <Typography  variant="body1" >上台和大家分享</Typography>
+                            <Typography  variant="body1" >你的Project或經歷！</Typography>
                           </CardContent>
                         </Card>
                     </Grid>

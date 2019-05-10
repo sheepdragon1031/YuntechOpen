@@ -63,9 +63,9 @@ class about extends Component {
         direction="row"
         justify="center"
         alignItems="center"  id="photo">
-         <Grid container spacing={16} >
+         <Grid container spacing={0} >
             <Title title={this.state.page}/>
-            <Grid item xs={12}>
+            <Grid item xs={12} >
               <Gallery images={this.state.images} enableImageSelection={false}/>
             </Grid>
          </Grid>

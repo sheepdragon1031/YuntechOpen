@@ -59,7 +59,7 @@ class calendar extends Component {
                 <Tabs tab={this.state.page} />
             </Grid>
          </Grid>
-         <Grid container spacing={0} >
+         <Grid container spacing={0} style={{paddingTop: '1rem'}} >
             <Title title={this.state.title[1]}/>
             <Grid item xs={12}>
                 <Tabs tab={this.state.pages} />

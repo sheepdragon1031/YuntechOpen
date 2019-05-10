@@ -31,9 +31,6 @@ const style =  ({
       height: 0,
       paddingTop: '56.25%', // 16:9
     },
-    maxpage:{
-      
-    }
 })
 
 class calendar extends Component {
@@ -63,9 +60,9 @@ class calendar extends Component {
         direction="row"
         justify="center"
         alignItems="center"  id="photo">
-         <Grid container spacing={16} >
+         <Grid container spacing={0} >
             <Title title={this.state.title}/>
-              <Grid item xs={12} style={{paddingTop: '1rem'}}>
+              <Grid item xs={12}>
                   <Typography component="h3" variant="h3" style={{fontWeight: 300}}>開放原始碼研究社</Typography>
               </Grid>
               <Grid item xs={12}>
@@ -73,7 +70,7 @@ class calendar extends Component {
               </Grid>
                 <Grid item xs={5} style={style.blackLine}></Grid>
                 <Grid item xs={7}></Grid>
-                
+                <Grid container spacing={16} style={{paddingTop: '1rem'}} >
                 {this.state.image.map((index,val)=>{
                   return (
                     <Grid item xs={3} key={'media'+val} style={style.maxpage}>
@@ -87,6 +84,7 @@ class calendar extends Component {
                     </Grid>
                   )
                 })}
+                </Grid>
               <Grid item xs={12} style={{paddingTop: '1rem'}}>
                 <Typography component="h3" variant="h3" style={{fontWeight: 300}}>開放原始碼研究社</Typography>
               </Grid>
@@ -95,6 +93,7 @@ class calendar extends Component {
               </Grid>
               <Grid item xs={5} style={style.blackLine}></Grid>
               <Grid item xs={7}></Grid>
+              <Grid container spacing={16} style={{paddingTop: '1rem'}}>
               {this.state.images.map((index,val)=>{
                 return (
                   <Grid item xs={3} key={'media'+val} style={style.maxpage}>
@@ -108,6 +107,7 @@ class calendar extends Component {
                   </Grid>
                 )
               })}
+              </Grid>
           </Grid>
        </Grid>
       );
