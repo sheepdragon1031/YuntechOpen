@@ -21,7 +21,7 @@
 .index-bar{
     background: url('/Resource/PageBorder.png') center center no-repeat ;
     height: 8rem;
-    background-size: cover;
+    background-size: 125%;
     margin-top: -7rem;
     box-shadow: 0rem 0rem 2rem 2rem #e6e6e6 inset;
     margin-bottom: 2rem !important;
