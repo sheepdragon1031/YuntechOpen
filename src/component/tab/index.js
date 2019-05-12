@@ -42,7 +42,7 @@ class tab extends Component {
         const { tab } = this.props;
         
         return (
-            <div style={{paddingTop: '1rem'}}>
+            <div style={{padding: '1rem 5rem'}}>
             <AppBar position="static" color="default">
             <Tabs
                 value={value}
@@ -63,7 +63,13 @@ class tab extends Component {
                     return (
                         <Paper style={style.content}  key={`tabs`+val}>
                         <TabContainer >
-                            {index.content}
+                            {index.content.map((indexs,vals) =>{
+                                return (
+                                    <div key={`tab-div`+ vals}>
+                                        {indexs}
+                                    </div>
+                                )
+                            })}
                         </TabContainer>
                         </Paper>)
                 }

@@ -12,15 +12,22 @@
     display: block;
     margin: auto;
 }
-.headerGD{
-    /* height: 100vh; */
-}
 .fluctlight{
     display: inline-block;
     border-right: #ffffff 0.2rem solid;
     animation: FluctLight 1s ease-in-out infinite;
     transition: 1s;
 }
+.index-bar{
+    background: url('/Resource/PageBorder.png') center center no-repeat ;
+    height: 8rem;
+    background-size: cover;
+    margin-top: -7rem;
+    box-shadow: 0rem 0rem 2rem 2rem #e6e6e6 inset;
+    margin-bottom: 2rem !important;
+}
+
+
 @keyframes FluctLight{
     0%{
         border-right: #ffffff 0.2rem solid;

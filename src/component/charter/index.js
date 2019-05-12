@@ -27,7 +27,7 @@ const style =  ({
     }
 })
 
-class calendar extends Component {
+class charter extends Component {
     constructor(props){
       super(props);
       this.state = {
@@ -36,12 +36,14 @@ class calendar extends Component {
           page : [
             {
                 title: '111',
-                content: '111111111'},
+                content: ['',''],
+              },
           ],
           pages : [
             {
                 title: '111',
-                content: '111111111'},
+                content: ['',''],
+            },
           ]
       };
       
@@ -70,4 +72,4 @@ class calendar extends Component {
     }
   }
 
-  export default withStyles(styles)(calendar);
+  export default withStyles(styles)(charter);

@@ -58,9 +58,11 @@ class header extends Component {
                     </Grid>
                     </Parallax>
                 </div>
-                <Grid container spacing={0}  className='headerBG'
+                
+                <Grid container spacing={0}  className='headerBG' style={{background:'#e6e6e6'}}
                     direction="row"
                     justify="space-between">
+                    <Grid item xs={12}  className='index-bar' ></Grid>
                     <Grid item xs={12}>
                       <Typography component="h4" variant="h4" >你是誰?你從哪裡來?你要去哪裡?</Typography>
                     </Grid>
@@ -80,9 +82,11 @@ class header extends Component {
                         </Card>
                     </Grid>
                 </Grid>
-                <Grid container spacing={16}  className='headerBG'
+                
+                <Grid container spacing={16}  className='headerBG'  style={{background:'#e6e6e6'}}
                     direction="row"
                     justify="space-between">
+                    <Grid item xs={12} className='index-bar' ></Grid>
                     <Grid item xs={12}>
                       <Typography component="h4" variant="h4" align="center" >我們在幹嘛</Typography>
                     </Grid>

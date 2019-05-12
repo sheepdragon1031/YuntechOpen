@@ -37,16 +37,20 @@ class calendar extends Component {
           pages : [
             {
               title: '107-2',
-              content: '107107107107'},
+              content: ['',''],
+            },
             {
                 title: '107-1',
-                content: '107107107107107'},
+                content: ['','']
+            },
             {
                 title: '106-2',
-                content: '106106106106'},
+                content: ['','']
+              },
             {
                 title: '106-1',
-                content: '106106106106106'}
+                content: ['','']
+              }
           ]
       };
       

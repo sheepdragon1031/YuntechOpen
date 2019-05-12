@@ -11,7 +11,18 @@ const style =  ({
     blackLine:{
         marginLeft: '-1rem',
         padding: '.5rem',
-        background: '#000',
+        background: 'rgba(0,0,0,0.8)',
+    },
+    title:{
+        textShadow: '0rem 0rem 1px #565656 , 0rem 0rem 3px #565656',
+    },
+    titles:{
+        display: 'inline-block',
+        width: '50%',
+        paddingBottom: '1rem',
+        paddingLeft: '1rem',
+        borderBottom: '1rem solid',
+        textShadow: '0rem 0rem 1px #565656 , 0rem 0rem 3px #565656',
     }
 })
 
@@ -24,13 +35,11 @@ class title extends Component {
         return (
             <Grid container spacing={16} style={{paddingBottom: '1rem'}} >
                 <Grid item xs={12}>
-                <Typography component="h2" variant="h2" >開放原始碼研究社</Typography>
+                <Typography component="h2" variant="h2" style={style.title} >開放原始碼研究社</Typography>
                 </Grid>
-                <Grid item xs={12}>
-                <Typography component="h2" variant="h2" >{this.props.title}</Typography>
+                <Grid item xs={12} style={{marginLeft: '-1rem'}}>
+                <Typography component="h2" variant="h2" style={style.titles} >{this.props.title}</Typography>
                 </Grid>
-                <Grid item xs={7} style={style.blackLine}></Grid>
-                <Grid item xs={5}></Grid>
             </Grid>
         );
     }
